@@ -108,6 +108,7 @@ Two datasets are used in this project:
 - Expanding the dataset to include more occupations and larger tweet samples
 - Integrating other social media platforms for a broader analysis
 
+## Datasets
 The dataset of size 25.000 can be found [here](https://github.com/imayda/occupation-dataset-in-turkish).
 
 The dataset of size 30.000, created by adding new data, can be found [here](https://www.kaggle.com/datasets/tolgaizdas/turkish-tweet-dataset-for-occupation-prediction).
