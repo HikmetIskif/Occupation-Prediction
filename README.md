@@ -51,60 +51,50 @@ Two datasets are used in this project:
 | **Method Type**    | **Method**            | **NLP**    | **Single** | **Pairwise** |
 |--------------------|-----------------------|------------|------------|--------------|
 | **Machine Learning** | Logistic Regression   | Zeyrek     | 0.7316     | 0.8507       |
-|                    |                       | Zemberek   | **0.7374** | **0.8509**   |
-|                    | Naive Bayes           | Zeyrek     | 0.7231     | 0.8197       |
-|                    |                       | Zemberek   | 0.7298     | 0.8378       |
-|                    | Random Forest         | Zeyrek     | 0.6531     | 0.7618       |
-|                    |                       | Zemberek   | 0.6789     | 0.7858       |
-|                    | Support Vector Machine | Zeyrek     | 0.7199     | 0.8435       |
-|                    |                       | Zemberek   | 0.7307     | 0.8421       |
+| **Machine Learning** | Logistic Regression   | Zemberek   | **0.7374** | **0.8509**   |
+| **Machine Learning** | Naive Bayes           | Zeyrek     | 0.7231     | 0.8197       |
+| **Machine Learning** | Naive Bayes           | Zemberek   | 0.7298     | 0.8378       |
+| **Machine Learning** | Random Forest         | Zeyrek     | 0.6531     | 0.7618       |
+| **Machine Learning** | Random Forest         | Zemberek   | 0.6789     | 0.7858       |
+| **Machine Learning** | Support Vector Machine | Zeyrek     | 0.7199     | 0.8435       |
+| **Machine Learning** | Support Vector Machine | Zemberek   | 0.7307     | 0.8421       |
 | **Deep Learning**  | MLP                   | Zeyrek     | 0.7231     | 0.8368       |
-|                    |                       | Zemberek   | **0.7310** | **0.8517**   |
-|                    | CNN                   | Zeyrek     | 0.7003     | 0.7951       |
-|                    |                       | Zemberek   | 0.7210     | 0.8277       |
-|                    | LSTM                  | Zeyrek     | 0.6697     | 0.7332       |
-|                    |                       | Zemberek   | 0.6709     | 0.7573       |
-|                    | Bi-LSTM               | Zeyrek     | 0.6583     | 0.7636       |
-|                    |                       | Zemberek   | 0.6836     | 0.7840       |
-|                    | GRU                   | Zeyrek     | 0.6552     | 0.7255       |
-|                    |                       | Zemberek   | 0.6609     | 0.7149       |
+| **Deep Learning**  | MLP                  | Zemberek   | **0.7310** | **0.8517**   |
+| **Deep Learning**  | CNN                   | Zeyrek     | 0.7003     | 0.7951       |
+| **Deep Learning**  | CNN                   | Zemberek   | 0.7210     | 0.8277       |
+| **Deep Learning**  | LSTM                  | Zeyrek     | 0.6697     | 0.7332       |
+| **Deep Learning**  | LSTM                  | Zemberek   | 0.6709     | 0.7573       |
+| **Deep Learning**  | Bi-LSTM               | Zeyrek     | 0.6583     | 0.7636       |
+| **Deep Learning**  | Bi-LSTM               | Zemberek   | 0.6836     | 0.7840       |
+| **Deep Learning**  | GRU                   | Zeyrek     | 0.6552     | 0.7255       |
+| **Deep Learning**  | GRU                   | Zemberek   | 0.6609     | 0.7149       |
 | **Pre Trained**    | BERT                  | Zeyrek     | 0.7586     | 0.8699       |
-|                    |                       | Zemberek   | **0.7596** | **0.8730**   |
+| **Pre Trained**    | BERT                  | Zemberek   | **0.7596** | **0.8730**   |
 
 ## Results for Dataset with 30,000 Data
 
 | **Method Type**   | **Method**                | **NLP**  | **Single** | **Pairwise** |
 |-------------------|---------------------------|----------|------------|--------------|
-| **Machine Learning** | **Logistic Regression**    |          |            |              |
-|                   |                            | Zeyrek   | 0.7148     | **0.8448**   |
-|                   |                            | Zemberek | **0.7260** | 0.8374       |
-|                   | **Naive Bayes**            |          |            |              |
-|                   |                            | Zeyrek   | 0.6978     | 0.8191       |
-|                   |                            | Zemberek | 0.7225     | 0.8149       |
-|                   | **Random Forest**          |          |            |              |
-|                   |                            | Zeyrek   | 0.6475     | 0.7519       |
-|                   |                            | Zemberek | 0.6740     | 0.7708       |
-|                   | **Support Vector Machine** |          |            |              |
-|                   |                            | Zeyrek   | 0.7051     | 0.8445       |
-|                   |                            | Zemberek | 0.7200     | 0.8444       |
-| **Deep Learning** | **MLP**                    |          |            |              |
-|                   |                            | Zeyrek   | 0.7179     | 0.8334       |
-|                   |                            | Zemberek | **0.7375** | **0.8401**   |
-|                   | **CNN**                    |          |            |              |
-|                   |                            | Zeyrek   | 0.6931     | 0.8013       |
-|                   |                            | Zemberek | 0.7212     | 0.8190       |
-|                   | **LSTM**                   |          |            |              |
-|                   |                            | Zeyrek   | 0.6321     | 0.7383       |
-|                   |                            | Zemberek | 0.6683     | 0.7403       |
-|                   | **Bi-LSTM**                |          |            |              |
-|                   |                            | Zeyrek   | 0.6719     | 0.7597       |
-|                   |                            | Zemberek | 0.6953     | 0.7714       |
-|                   | **GRU**                    |          |            |              |
-|                   |                            | Zeyrek   | 0.6427     | 0.7367       |
-|                   |                            | Zemberek | 0.6730     | 0.7321       |
-| **Pre Trained**   | **BERT**                   |          |            |              |
-|                   |                            | Zeyrek   | 0.7427     | 0.8525       |
-|                   |                            | Zemberek | **0.7760** | **0.8558**   |
+| **Machine Learning** | Logistic Regression     | Zeyrek   | 0.7148     | **0.8448**   |
+| **Machine Learning** | Logistic Regression     | Zemberek | **0.7260** | 0.8374       |
+| **Machine Learning** | Naive Bayes             | Zeyrek   | 0.6978     | 0.8191       |
+| **Machine Learning** | Naive Bayes             | Zemberek | 0.7225     | 0.8149       |
+| **Machine Learning** | Random Forest             | Zeyrek   | 0.6475     | 0.7519       |
+| **Machine Learning** | Random Forest             | Zemberek | 0.6740     | 0.7708       |
+| **Machine Learning** |  Support Vector Machine   | Zeyrek   | 0.7051     | 0.8445       |
+| **Machine Learning** |  Support Vector Machine   | Zemberek | 0.7200     | 0.8444       |
+| **Deep Learning**  | MLP                        | Zeyrek   | 0.7179     | 0.8334       |
+| **Deep Learning** |  MLP                        | Zemberek | **0.7375** | **0.8401**   |
+| **Deep Learning**  | CNN                        | Zeyrek   | 0.6931     | 0.8013       |
+| **Deep Learning** | CNN                        | Zemberek | 0.7212     | 0.8190       |
+| **Deep Learning**  | LSTM                       | Zeyrek   | 0.6321     | 0.7383       |
+| **Deep Learning** | LSTM                       | Zemberek | 0.6683     | 0.7403       |
+| **Deep Learning**  | Bi-LSTM                    | Zeyrek   | 0.6719     | 0.7597       |
+| **Deep Learning**  | Bi-LSTM                    | Zemberek | 0.6953     | 0.7714       |
+| **Deep Learning**  | GRU                        | Zeyrek   | 0.6427     | 0.7367       |
+| **Deep Learning**  | GRU                        | Zemberek | 0.6730     | 0.7321       |
+| **Pre Trained**   | BERT                       | Zeyrek   | 0.7427     | 0.8525       |
+| **Pre Trained**   | BERT                       | Zemberek | **0.7760** | **0.8558**   |
 
 
 ## Results
