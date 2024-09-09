@@ -100,6 +100,6 @@ The dataset of size 25.000 can be found [here](https://github.com/imayda/occupat
 
 ## Contact
 For any inquiries, please contact:
-- Tolga İzdaş: [tolga.izdas@std.yildiz.edu.tr](mailto:tolga.izdas@std.yildiz.edu.tr)
+- Tolga İzdaş: [tolgaizdas@gmail.com](mailto:tolgaizdas@gmail.com)
 - Hikmet İskifoğlu: [hikmet.iskifoglu@std.yildiz.edu.tr](mailto:hikmet.iskifoglu@std.yildiz.edu.tr)
 
