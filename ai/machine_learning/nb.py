@@ -1,12 +1,12 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
 
-from ai.utils import load_data, convert_labels_to_numerical, get_prediction_results, predict_input
+from ai.utils import load_data, convert_labels_to_numerical, get_prediction_results
 
 if __name__ == '__main__':
     # Load data
-    data, labels = load_data("../../data/processed/zeyrek-25k.txt", group=True, group_size=2, unique=True)
+    data, labels = load_data("data", group=True, group_size=2, unique=True)
 
     # Split data into train and test sets
     train_data, test_data, train_labels, test_labels = train_test_split(data, labels, test_size=0.3, random_state=42)
@@ -37,17 +37,3 @@ if __name__ == '__main__':
     print("\nConfusion Matrix:\n", cm)
     print("\nClassification Report:\n", report)
     print(f"Accuracy: {accuracy}")
-
-    """
-    # Test on ungrouped data
-    ungrouped_data, ungrouped_labels = load_data("../../data/processed/zemberek-5k.txt", group=False, unique=True)
-    ungrouped_labels = convert_labels_to_numerical(ungrouped_labels, label_mapping)
-
-    ungrouped_data_vectors = vectorizer.transform(ungrouped_data).toarray()
-
-    accuracy, report, cm = get_prediction_results(nb, ungrouped_data_vectors, ungrouped_labels, label_mapping, is_deep=False)
-
-    print("\nConfusion Matrix:\n", cm)
-    print("\nClassification Report:\n", report)
-    print(f"Accuracy: {accuracy:.2f}")
-    """

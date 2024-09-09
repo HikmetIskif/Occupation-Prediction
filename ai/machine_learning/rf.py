@@ -1,12 +1,12 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 
 from ai.utils import load_data, convert_labels_to_numerical, get_prediction_results
 
 if __name__ == '__main__':
     # Load data
-    data, labels = load_data("../../data/processed/zeyrek-25k.txt", group=True, group_size=2, unique=True)
+    data, labels = load_data("data", group=True, group_size=2, unique=True)
 
     # Split data into train and test sets
     train_data, test_data, train_labels, test_labels = train_test_split(data, labels, test_size=0.3, random_state=42)

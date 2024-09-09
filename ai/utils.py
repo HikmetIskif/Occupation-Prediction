@@ -1,10 +1,10 @@
+import re
+
 import numpy as np
 from keras.preprocessing import sequence
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
 from nltk.corpus import stopwords
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from zemberek import (TurkishSentenceNormalizer, TurkishMorphology, TurkishTokenizer)
-import re
 
 
 def read_data(filename, is_raw):

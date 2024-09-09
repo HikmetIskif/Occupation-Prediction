@@ -78,6 +78,7 @@ def process_batch(batch):
 
 if __name__ == '__main__':
     freeze_support()
+
     # Batch processing with parallelization
     batch_size = 5000
     with Pool() as pool:

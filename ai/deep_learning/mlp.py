@@ -1,14 +1,13 @@
-from tensorflow import keras
-
 from keras.layers import Input, Embedding, Dense, Flatten, GlobalMaxPooling1D, Dropout
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from tensorflow import keras
 
-from ai.utils import load_data, convert_labels_to_numerical, get_prediction_results, create_bow_vector, predict_input
+from ai.utils import load_data, convert_labels_to_numerical, get_prediction_results, create_bow_vector
 
 if __name__ == '__main__':
     # Load data
-    data, labels = load_data("../../data/processed/zemberek-5k.txt", group=True, group_size=2, unique=True)
+    data, labels = load_data("data", group=True, group_size=2, unique=True)
 
     # Split data into train and test sets
     train_data, test_data, train_labels, test_labels = train_test_split(data, labels, test_size=0.3, random_state=42)
@@ -65,22 +64,3 @@ if __name__ == '__main__':
     print("\nConfusion Matrix:\n", cm)
     print("\nClassification Report:\n", report)
     print(f"Accuracy: {accuracy}")
-
-    from tensorflow.keras.utils import plot_model
-
-    dot_img_file = '../../raporlama/images/dense_model.png'
-    plot_model(model, to_file=dot_img_file, show_shapes=True)
-
-    """
-    # Test on ungrouped data
-    ungrouped_data, ungrouped_labels = load_data("../../data/processed/zemberek-5k.txt", group=False, unique=True)
-    ungrouped_labels = convert_labels_to_numerical(ungrouped_labels, label_mapping)
-
-    ungrouped_data_vectors = create_bow_vector(vectorizer, ungrouped_data, input_length=MAX_LENGTH)
-
-    accuracy, report, cm = get_prediction_results(model, ungrouped_data_vectors, ungrouped_labels, label_mapping)
-
-    print("\nConfusion Matrix:\n", cm)
-    print("\nClassification Report:\n", report)
-    print(f"Accuracy: {accuracy:.2f}")
-    """

@@ -6,7 +6,7 @@ from ai.utils import load_data, convert_labels_to_numerical, get_prediction_resu
 
 if __name__ == '__main__':
     # Load data
-    data, labels = load_data("../../data/processed/zemberek-30k.txt", group=False, group_size=5, unique=True)
+    data, labels = load_data("data", group=False, group_size=5, unique=True)
 
     # Split data into train and test sets
     train_data, test_data, train_labels, test_labels = train_test_split(data, labels, test_size=0.3, random_state=42)
@@ -37,4 +37,3 @@ if __name__ == '__main__':
     print("\nConfusion Matrix:\n", cm)
     print("\nClassification Report:\n", report)
     print(f"Accuracy: {accuracy}")
-

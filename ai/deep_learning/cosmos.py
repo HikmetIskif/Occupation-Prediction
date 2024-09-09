@@ -23,12 +23,14 @@ train_labels = convert_labels_to_numerical(train_labels, label_mapping)
 test_labels = convert_labels_to_numerical(test_labels, label_mapping)
 
 # Load pre-trained BERT model and tokenizer
-tokenizer = BertTokenizer.from_pretrained('dbmdz/bert-base-turkish-uncased')
-model = BertForSequenceClassification.from_pretrained('dbmdz/bert-base-turkish-uncased', num_labels=10).to(device)
+tokenizer = BertTokenizer.from_pretrained('ytu-ce-cosmos/turkish-base-bert-uncased')
+model = BertForSequenceClassification.from_pretrained('ytu-ce-cosmos/turkish-base-bert-uncased', num_labels=10).to(
+    device)
 
 # Tokenize and prepare input data
 MAX_LENGTH = max(len(max(train_data, key=len).split()), len(max(test_data, key=len).split()))
-encoded_data_train = tokenizer(train_data, padding=True, truncation=True, max_length=MAX_LENGTH, return_tensors='pt')
+encoded_data_train = tokenizer(train_data, padding=True, truncation=True, max_length=MAX_LENGTH,
+                               return_tensors='pt')
 
 train_labels_tensor = torch.tensor(train_labels)
 train_dataset = TensorDataset(encoded_data_train['input_ids'], encoded_data_train['attention_mask'],
@@ -56,7 +58,8 @@ for epoch in range(10):
 encoded_data_test = tokenizer(test_data, padding=True, truncation=True, max_length=128, return_tensors='pt')
 
 test_labels_tensor = torch.tensor(test_labels)
-test_dataset = TensorDataset(encoded_data_test['input_ids'], encoded_data_test['attention_mask'], test_labels_tensor)
+test_dataset = TensorDataset(encoded_data_test['input_ids'], encoded_data_test['attention_mask'],
+                             test_labels_tensor)
 test_loader = DataLoader(test_dataset, batch_size=128, shuffle=True)
 
 model.eval()
