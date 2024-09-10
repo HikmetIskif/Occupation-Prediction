@@ -1,7 +1,7 @@
 # Occupation Prediction from Twitter Data
 
 ## Overview
-This project aims to predict the occupation of Twitter users based on their Turkish tweets. The study utilizes machine learning and deep learning techniques to analyze two datasets comprising 10,000 , 15,000 , 20,000 , 25,000 and 30,000 tweets, respectively. Various models, including Logistic Regression, Naive Bayes, Random Forest, Support Vector Machine, Multi-Layer Perceptron, Convolutional Neural Network, Recurrent Neural Network, BERT and COSMOS are evaluated to determine the best performance.
+This project aims to predict the occupation of Twitter, now known as X, users based on their Turkish tweets. The study utilizes machine learning and deep learning techniques to analyze two datasets comprising 10,000 , 15,000 , 20,000 , 25,000 and 30,000 tweets, respectively. Various models, including Logistic Regression, Naive Bayes, Random Forest, Support Vector Machine, Multi-Layer Perceptron, Convolutional Neural Network, Recurrent Neural Network, BERT and COSMOS are evaluated to determine the best performance.
 
 ## Datasets
 Five datasets are used in this project:
